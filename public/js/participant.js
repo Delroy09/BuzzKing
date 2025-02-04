@@ -18,3 +18,18 @@ function pressBuzzer() {
         document.getElementById('answer').disabled = false;
     }, 5000); // 5 second cooldown
 }
+
+socket.on('new-question', (question) => {
+    const questionSection = document.getElementById('question-section');
+    let questionHtml = `<p>${question.text}</p>`;
+
+    if (question.type === 'mcq') {
+        questionHtml += '<ul>';
+        question.options.forEach((option, index) => {
+            questionHtml += `<li>${option}</li>`;
+        });
+        questionHtml += '</ul>';
+    }
+
+    questionSection.innerHTML = questionHtml;
+});
