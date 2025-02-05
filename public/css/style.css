@@ -20,3 +20,33 @@
   font-size: 18px;
   border-bottom: 1px solid #dee2e6;
 }
+
+/* Game specific styles */
+.metric {
+  margin-bottom: 1rem;
+}
+
+.progress {
+  height: 25px;
+}
+
+.progress-bar {
+  transition: width 0.3s ease-in-out;
+}
+
+#timer {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.choice-button {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+#scenario-panel {
+  min-height: 300px;
+}
